@@ -1,0 +1,289 @@
+{% extends "base.html" %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+
+<!-- Hero Section -->
+
+<div class="hero shadow-lg">
+
+<div class="row align-items-center">
+
+<div class="col-lg-6">
+
+<h1 class="display-3 fw-bold">
+
+🧠 AI Powered Student Stress Prediction
+
+</h1>
+
+<p class="lead mt-4">
+
+Predict student stress levels using Machine Learning and
+promote better mental well-being through early awareness.
+
+</p>
+
+<br>
+
+<a href="/predict" class="btn btn-warning btn-lg me-3">
+
+🚀 Start Prediction
+
+</a>
+
+<a href="/about" class="btn btn-light btn-lg">
+
+Learn More
+
+</a>
+
+</div>
+
+<div class="col-lg-6 text-center">
+
+<img src="{{ url_for('static',filename='images/hero.png') }}"
+class="img-fluid">
+
+</div>
+
+</div>
+
+</div>
+
+<br><br>
+
+<!-- Statistics -->
+
+<div class="row text-center">
+
+<div class="col-md-3">
+
+<div class="card shadow p-4">
+
+<h1 class="stats">1100+</h1>
+
+<h5>Students</h5>
+
+</div>
+
+</div>
+
+<div class="col-md-3">
+
+<div class="card shadow p-4">
+
+<h1 class="stats">87.7%</h1>
+
+<h5>Accuracy</h5>
+
+</div>
+
+</div>
+
+<div class="col-md-3">
+
+<div class="card shadow p-4">
+
+<h1 class="stats">20</h1>
+
+<h5>Features</h5>
+
+</div>
+
+</div>
+
+<div class="col-md-3">
+
+<div class="card shadow p-4">
+
+<h1 class="stats">AI</h1>
+
+<h5>Random Forest</h5>
+
+</div>
+
+</div>
+
+</div>
+
+<br><br>
+
+<!-- How It Works -->
+
+<div class="card shadow-lg p-5">
+
+<h2 class="text-center text-primary">
+
+⚙️ How It Works
+
+</h2>
+
+<hr>
+
+<div class="row text-center">
+
+<div class="col-md-3">
+
+<h1>1️⃣</h1>
+
+<h5>Fill Details</h5>
+
+<p>Enter student information.</p>
+
+</div>
+
+<div class="col-md-3">
+
+<h1>2️⃣</h1>
+
+<h5>AI Analysis</h5>
+
+<p>The model analyzes 20 features.</p>
+
+</div>
+
+<div class="col-md-3">
+
+<h1>3️⃣</h1>
+
+<h5>Prediction</h5>
+
+<p>Random Forest predicts stress level.</p>
+
+</div>
+
+<div class="col-md-3">
+
+<h1>4️⃣</h1>
+
+<h5>Result</h5>
+
+<p>Get personalized recommendations.</p>
+
+</div>
+
+</div>
+
+</div>
+
+<br><br>
+
+<!-- Why Choose Us -->
+
+<div class="card shadow-lg p-5">
+
+<h2 class="text-center text-success">
+
+⭐ Why Choose Our System?
+
+</h2>
+
+<hr>
+
+<div class="row">
+
+<div class="col-md-4 mb-3">
+
+<div class="card p-3 text-center">
+
+🤖
+
+<h5>AI Powered</h5>
+
+</div>
+
+</div>
+
+<div class="col-md-4 mb-3">
+
+<div class="card p-3 text-center">
+
+📊
+
+<h5>Research Based</h5>
+
+</div>
+
+</div>
+
+<div class="col-md-4 mb-3">
+
+<div class="card p-3 text-center">
+
+⚡
+
+<h5>Instant Prediction</h5>
+
+</div>
+
+</div>
+
+<div class="col-md-4 mb-3">
+
+<div class="card p-3 text-center">
+
+🔒
+
+<h5>Secure</h5>
+
+</div>
+
+</div>
+
+<div class="col-md-4 mb-3">
+
+<div class="card p-3 text-center">
+
+🎓
+
+<h5>Student Focused</h5>
+
+</div>
+
+</div>
+
+<div class="col-md-4 mb-3">
+
+<div class="card p-3 text-center">
+
+💡
+
+<h5>Easy to Use</h5>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<br><br>
+
+<!-- CTA -->
+
+<div class="card shadow-lg p-5 text-center">
+
+<h2>
+
+Ready to Predict Your Stress Level?
+
+</h2>
+
+<p class="lead">
+
+Click below to start AI analysis.
+
+</p>
+
+<a href="/predict" class="btn btn-primary btn-lg">
+
+Start Prediction
+
+</a>
+
+</div>
+
+{% endblock %}

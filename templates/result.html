@@ -1,0 +1,173 @@
+{% extends "base.html" %}
+
+{% block title %}
+Prediction Result
+{% endblock %}
+
+{% block content %}
+
+<div class="container mt-5">
+
+<div class="card shadow-lg p-5 text-center">
+
+{% if prediction == 0 %}
+
+<img src="{{ url_for('static', filename='images/low.png') }}"
+class="img-fluid mx-auto mb-4"
+style="max-width:300px;">
+
+<h1 class="text-success">
+🟢 LOW STRESS
+</h1>
+
+<div class="alert alert-success">
+{{ message }}
+</div>
+
+<h4>Recommendations</h4>
+
+<ul class="list-group">
+<li class="list-group-item">✅ Continue healthy habits</li>
+<li class="list-group-item">✅ Sleep 7-8 hours daily</li>
+<li class="list-group-item">✅ Exercise regularly</li>
+<li class="list-group-item">✅ Maintain social connections</li>
+</ul>
+
+{% elif prediction == 1 %}
+
+<img src="{{ url_for('static', filename='images/medium.png') }}"
+class="img-fluid mx-auto mb-4"
+style="max-width:300px;">
+
+<h1 class="text-warning">
+🟡 MEDIUM STRESS
+</h1>
+
+<div class="alert alert-warning">
+{{ message }}
+</div>
+
+<h4>Recommendations</h4>
+
+<ul class="list-group">
+<li class="list-group-item">📚 Take study breaks</li>
+<li class="list-group-item">😴 Improve sleep quality</li>
+<li class="list-group-item">🏃 Exercise regularly</li>
+<li class="list-group-item">👨‍👩‍👧 Spend time with family</li>
+</ul>
+
+{% else %}
+
+<img src="{{ url_for('static', filename='images/high.png') }}"
+class="img-fluid mx-auto mb-4"
+style="max-width:300px;">
+
+<h1 class="text-danger">
+🔴 HIGH STRESS
+</h1>
+
+<div class="alert alert-danger">
+{{ message }}
+</div>
+
+<h4>Recommendations</h4>
+
+<ul class="list-group">
+<li class="list-group-item">❤️ Consult a counselor</li>
+<li class="list-group-item">😴 Get proper sleep</li>
+<li class="list-group-item">🧘 Practice meditation</li>
+<li class="list-group-item">👨‍👩‍👧 Seek support from friends and family</li>
+</ul>
+
+{% endif %}
+
+<hr>
+
+<h3 class="mt-4">
+📊 Prediction Confidence
+</h3>
+
+<br>
+
+<h6>Low Stress</h6>
+
+<div class="progress mb-3">
+<div class="progress-bar bg-success"
+style="width: {{ low_prob }}%;">
+{{ low_prob }}%
+</div>
+</div>
+
+<h6>Medium Stress</h6>
+
+<div class="progress mb-3">
+<div class="progress-bar bg-warning"
+style="width: {{ medium_prob }}%;">
+{{ medium_prob }}%
+</div>
+</div>
+
+<h6>High Stress</h6>
+
+<div class="progress mb-4">
+<div class="progress-bar bg-danger"
+style="width: {{ high_prob }}%;">
+{{ high_prob }}%
+</div>
+</div>
+
+<h4>Stress Meter</h4>
+
+<div class="progress" style="height:25px;">
+
+{% if prediction == 0 %}
+
+<div class="progress-bar bg-success"
+style="width:30%;">
+30%
+</div>
+
+{% elif prediction == 1 %}
+
+<div class="progress-bar bg-warning"
+style="width:65%;">
+65%
+</div>
+
+{% else %}
+
+<div class="progress-bar bg-danger"
+style="width:95%;">
+95%
+</div>
+
+{% endif %}
+
+</div>
+
+<div class="alert alert-info mt-4">
+
+<strong>Disclaimer:</strong>
+
+This prediction is generated using a Machine Learning model
+for educational purposes and should not be considered a
+medical diagnosis.
+
+</div>
+
+<br>
+
+<a href="/predict" class="btn btn-primary btn-lg">
+Predict Again
+</a>
+
+<a href="/" class="btn btn-secondary btn-lg">
+ Home
+</a>
+
+</div>
+
+</div>
+
+{% endblock %}
+

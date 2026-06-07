@@ -1,0 +1,326 @@
+body{
+
+    background:#f4f8fb;
+    
+    font-family:'Poppins',sans-serif;
+    
+    }
+    
+.navbar{
+    
+    box-shadow:0 5px 15px rgba(0,0,0,.1);
+    
+    }
+    
+.hero{
+    
+    background:linear-gradient(135deg,#2563eb,#06b6d4);
+    
+    padding:80px;
+    
+    border-radius:20px;
+    
+    color:white;
+    
+    margin-top:20px;
+    
+    }
+    
+.hero img{
+    
+    width:100%;
+    
+    animation:float 3s ease-in-out infinite;
+    
+    }
+    
+    @keyframes float{
+    
+    0%{
+    
+    transform:translateY(0);
+    
+    }
+    
+    50%{
+    
+    transform:translateY(-10px);
+    
+    }
+    
+    100%{
+    
+    transform:translateY(0);
+    
+    }
+    
+    }
+    
+.card{
+    
+    border:none;
+    
+    border-radius:15px;
+    
+    transition:.4s;
+    
+    }
+    
+.card:hover{
+    
+    transform:translateY(-10px);
+    
+    box-shadow:0 10px 20px rgba(0,0,0,.15);
+    
+    }
+    
+.stats{
+    
+    font-size:40px;
+    
+    font-weight:bold;
+    
+    color:#2563eb;
+    
+    }
+    
+.btn-custom{
+    
+    background:#f59e0b;
+    
+    color:white;
+    
+    padding:15px 30px;
+    
+    font-size:20px;
+    
+    border-radius:50px;
+    
+    }
+    
+.btn-custom:hover{
+    
+    background:#d97706;
+    
+    color:white;
+    
+    }
+    
+footer{
+    
+    margin-top:80px;
+    
+    padding:30px;
+    
+    background:#111827;
+    
+    color:white;
+    
+    }
+.card{
+
+        border:none;
+        
+        border-radius:20px;
+        
+        transition:.4s;
+        
+        }
+        
+.card:hover{
+        
+        transform:translateY(-10px);
+        
+        box-shadow:0 15px 30px rgba(0,0,0,.15);
+        
+        }
+        
+        img{
+        
+        border-radius:20px;
+        
+        }
+        
+        h1{
+        
+        font-weight:bold;
+        
+        }
+        
+        .lead{
+        
+        font-size:22px;
+        
+        }
+.list-group-item{
+
+            font-size:18px;
+            
+            padding:15px;
+            
+            }
+            
+            .progress{
+            
+            border-radius:20px;
+            
+            overflow:hidden;
+            
+            }
+            
+            .progress-bar{
+            
+            font-size:18px;
+            
+            font-weight:bold;
+            
+            }
+            
+            .card{
+            
+            animation:fadein 1s;
+            
+            }
+            
+            @keyframes fadein{
+            
+            from{
+            
+            opacity:0;
+            
+            transform:translateY(30px);
+            
+            }
+            
+            to{
+            
+            opacity:1;
+            
+            transform:translateY(0);
+            
+            }
+            
+            }
+.navbar-brand{
+            
+            font-size:30px;
+            
+            }
+            
+            .nav-link{
+            
+            transition:.3s;
+            
+            }
+            
+            .nav-link:hover{
+            
+            color:#ffd43b !important;
+            
+            transform:scale(1.08);
+            
+            }
+            
+            .card{
+            
+            transition:.4s;
+            
+            }
+            
+            .card:hover{
+            
+            transform:translateY(-8px);
+            
+            box-shadow:0 12px 24px rgba(0,0,0,.15);
+            
+            }
+            
+            .btn{
+            
+            transition:.3s;
+            
+            }
+            
+            .btn:hover{
+            
+            transform:scale(1.05);
+            
+            }
+            
+            footer{
+            
+            background:#111827;
+            
+            }
+            
+            body{
+            
+            scroll-behavior:smooth;
+            
+            }
+
+            .form-control,
+            .form-select{
+            
+            border-radius:12px;
+            
+            padding:12px;
+            
+            }
+            
+            .form-control:focus,
+            .form-select:focus{
+            
+            box-shadow:0 0 10px rgba(37,99,235,.3);
+            
+            border-color:#2563eb;
+            
+            }
+            
+            .section-card{
+            
+            background:white;
+            
+            padding:25px;
+            
+            border-radius:20px;
+            
+            margin-bottom:25px;
+            
+            box-shadow:0 5px 15px rgba(0,0,0,.08);
+            
+            }
+            
+            .predict-btn{
+            
+            padding:15px 50px;
+            
+            font-size:22px;
+            
+            border-radius:50px;
+            
+            font-weight:bold;
+            
+            }
+            
+            .predict-btn:hover{
+            
+            transform:scale(1.05);
+            
+            }
+            
+            .form-label{
+            
+            font-weight:600;
+            
+            }
+            
+            body{
+
+                background:linear-gradient(
+                135deg,
+                #f4f8fb,
+                #eef5ff
+                );
+                
+                }

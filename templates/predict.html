@@ -1,0 +1,206 @@
+{% extends "base.html" %}
+
+{% block title %}Predict Stress{% endblock %}
+
+{% block content %}
+
+<div class="container my-5">
+
+<div class="card shadow-lg border-0">
+
+<div class="card-body p-5">
+    <div class="alert alert-primary text-center">
+<h1 class="text-center text-primary mb-3">
+🧠 Student Stress Assessment
+</h1>
+
+
+    <h3>Student Stress Assessment </h3>
+<p> Fill all details carefully for accurate prediction.</p>
+    
+</div>
+
+<form action="/result" method="POST">
+
+<div class="row">
+
+<!-- LEFT COLUMN -->
+
+<div class="col-lg-6">
+
+    <div class="section-card">
+    
+    <h4 class="text-success mb-4">
+    
+    🧠 Mental Health
+    
+    </h4>
+
+<h4 class="text-success mb-3">Mental Health</h4>
+
+<div class="mb-3">
+<label class="form-label">Anxiety Level (0-21)</label>
+<input type="number" class="form-control"
+name="anxiety_level" min="0" max="21" required>
+</div>
+
+<div class="mb-3">
+<label class="form-label">Self Esteem</label>
+<input type="number" class="form-control"
+name="self_esteem" required>
+</div>
+
+<div class="mb-3">
+<label class="form-label">Mental Health History</label>
+<select class="form-select" name="mental_health_history">
+<option value="0">No</option>
+<option value="1">Yes</option>
+</select>
+</div>
+
+<div class="mb-3">
+<label class="form-label">Depression (0-27)</label>
+<input type="number" class="form-control"
+name="depression" min="0" max="27" required>
+</div>
+
+<div class="mb-3">
+<label class="form-label">Headache (0-5)</label>
+<input type="number" class="form-control"
+name="headache" min="0" max="5" required>
+</div>
+
+<div class="mb-3">
+<label class="form-label">Blood Pressure</label>
+<select class="form-select" name="blood_pressure">
+<option value="1">Normal</option>
+<option value="2">Medium</option>
+<option value="3">High</option>
+</select>
+</div>
+
+<div class="mb-3">
+<label class="form-label">Sleep Quality (0-5)</label>
+<input type="number" class="form-control"
+name="sleep_quality" min="0" max="5" required>
+</div>
+
+<div class="mb-3">
+<label class="form-label">Breathing Problem (0-5)</label>
+<input type="number" class="form-control"
+name="breathing_problem" min="0" max="5" required>
+</div>
+
+<div class="mb-3">
+<label class="form-label">Noise Level (0-5)</label>
+<input type="number" class="form-control"
+name="noise_level" min="0" max="5" required>
+</div>
+
+<div class="mb-3">
+<label class="form-label">Living Conditions (0-5)</label>
+<input type="number" class="form-control"
+name="living_conditions" min="0" max="5" required>
+</div>
+
+</div>
+</div>
+
+<!-- RIGHT COLUMN -->
+
+<div class="col-lg-6">
+
+    <div class="section-card">
+    
+    <h4 class="text-warning mb-4">
+    
+    📚 Academic & Social Factors
+    
+    </h4>
+
+<h4 class="text-warning mb-3">Academic & Social Factors</h4>
+
+<div class="mb-3">
+<label class="form-label">Safety (0-5)</label>
+<input type="number" class="form-control"
+name="safety" min="0" max="5" required>
+</div>
+
+<div class="mb-3">
+<label class="form-label">Basic Needs (0-5)</label>
+<input type="number" class="form-control"
+name="basic_needs" min="0" max="5" required>
+</div>
+
+<div class="mb-3">
+<label class="form-label">Academic Performance (0-5)</label>
+<input type="number" class="form-control"
+name="academic_performance" min="0" max="5" required>
+</div>
+
+<div class="mb-3">
+<label class="form-label">Study Load (0-5)</label>
+<input type="number" class="form-control"
+name="study_load" min="0" max="5" required>
+</div>
+
+<div class="mb-3">
+<label class="form-label">Teacher Student Relationship (0-5)</label>
+<input type="number" class="form-control"
+name="teacher_student_relationship" min="0" max="5" required>
+</div>
+
+<div class="mb-3">
+<label class="form-label">Future Career Concerns (0-5)</label>
+<input type="number" class="form-control"
+name="future_career_concerns" min="0" max="5" required>
+</div>
+
+<div class="mb-3">
+<label class="form-label">Social Support (0-3)</label>
+<input type="number" class="form-control"
+name="social_support" min="0" max="3" required>
+</div>
+
+<div class="mb-3">
+<label class="form-label">Peer Pressure (0-5)</label>
+<input type="number" class="form-control"
+name="peer_pressure" min="0" max="5" required>
+</div>
+
+<div class="mb-3">
+<label class="form-label">Extracurricular Activities (0-5)</label>
+<input type="number" class="form-control"
+name="extracurricular_activities" min="0" max="5" required>
+</div>
+
+<div class="mb-3">
+<label class="form-label">Bullying (0-5)</label>
+<input type="number" class="form-control"
+name="bullying" min="0" max="5" required>
+</div>
+
+</div>
+</div>
+</div>
+<div id="loader" style="display:none;" class="text-center"> <div class="spinner-border text-primary"> </div> <p class="mt-3"> 🤖 AI is analyzing your data... </p> </div>
+<div class="text-center mt-5">
+
+    <button type="submit"
+    class="btn btn-primary btn-lg px-5">
+    
+    Predict Stress Level
+    
+    </button>
+
+</div>
+
+</form>
+
+</div>
+
+</div>
+
+</div>
+
+{% endblock %}
